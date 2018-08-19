@@ -74,6 +74,7 @@ public class UserLoginController {
 	 * @return
 	 */
 	public JSONObject assembleData(RspBooleanBO rspBO) {
+		//转换出参数据。。。
 		JSONObject jsonObject = new JSONObject();
 		jsonObject.put("respCode", StringUtils.isBlank(rspBO.getRespCode()) ? "9999" : rspBO.getRespCode());
 		jsonObject.put("respDesc", StringUtils.isBlank(rspBO.getRespDesc()) ? ";描述为空" : rspBO.getRespDesc());
