@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.yekong.managesys.dao.UserInfoMapper" >
+  <resultMap id="BaseResultMap" type="cn.yekong.managesys.model.UserInfo" >
+    <id column="user_Id" property="userId" jdbcType="INTEGER" />
+    <result column="user_Name" property="userName" jdbcType="VARCHAR" />
+    <result column="user_Age" property="userAge" jdbcType="VARCHAR" />
+    <result column="user_Sex" property="userSex" jdbcType="CHAR" />
+    <result column="user_Birth" property="userBirth" jdbcType="DATE" />
+    <result column="user_Phone" property="userPhone" jdbcType="VARCHAR" />
+    <result column="user_ID_Card" property="userIdCard" jdbcType="VARCHAR" />
+    <result column="user_Password" property="userPassword" jdbcType="VARCHAR" />
+    <result column="user_Address" property="userAddress" jdbcType="VARCHAR" />
+    <result column="user_Hobby" property="userHobby" jdbcType="VARCHAR" />
+    <result column="user_Weight" property="userWeight" jdbcType="VARCHAR" />
+    <result column="user_Height" property="userHeight" jdbcType="VARCHAR" />
+    <result column="user_Student_Number" property="userStudentNumber" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    user_Id, user_Name, user_Age, user_Sex, user_Birth, user_Phone, user_ID_Card, user_Password, 
+    user_Address, user_Hobby, user_Weight, user_Height, user_Student_Number
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from user_info
+    where user_Id = #{userId,jdbcType=INTEGER}
+  </select>
+   <select id="selectUserByNameAndpassword" resultMap="BaseResultMap" >
+    select 
+    <include refid="Base_Column_List" />
+    from user_info
+    where user_Name = #{userName,jdbcType=INTEGER} and user_Password=#{password,jdbcType=VARCHAR}
+  </select>
+  
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from user_info
+    where user_Id = #{userId,jdbcType=VARCHAR} 
+  </delete>
+  <insert id="insert" parameterType="cn.yekong.managesys.model.UserInfo" >
+    insert into user_info (user_Id, user_Name, user_Age, 
+      user_Sex, user_Birth, user_Phone, 
+      user_ID_Card, user_Password, user_Address, 
+      user_Hobby, user_Weight, user_Height, 
+      user_Student_Number)
+    values (#{userId,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{userAge,jdbcType=VARCHAR}, 
+      #{userSex,jdbcType=CHAR}, #{userBirth,jdbcType=DATE}, #{userPhone,jdbcType=VARCHAR}, 
+      #{userIdCard,jdbcType=VARCHAR}, #{userPassword,jdbcType=VARCHAR}, #{userAddress,jdbcType=VARCHAR}, 
+      #{userHobby,jdbcType=VARCHAR}, #{userWeight,jdbcType=VARCHAR}, #{userHeight,jdbcType=VARCHAR}, 
+      #{userStudentNumber,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.yekong.managesys.model.UserInfo" >
+    insert into user_info
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="userId != null" >
+        user_Id,
+      </if>
+      <if test="userName != null" >
+        user_Name,
+      </if>
+      <if test="userAge != null" >
+        user_Age,
+      </if>
+      <if test="userSex != null" >
+        user_Sex,
+      </if>
+      <if test="userBirth != null" >
+        user_Birth,
+      </if>
+      <if test="userPhone != null" >
+        user_Phone,
+      </if>
+      <if test="userIdCard != null" >
+        user_ID_Card,
+      </if>
+      <if test="userPassword != null" >
+        user_Password,
+      </if>
+      <if test="userAddress != null" >
+        user_Address,
+      </if>
+      <if test="userHobby != null" >
+        user_Hobby,
+      </if>
+      <if test="userWeight != null" >
+        user_Weight,
+      </if>
+      <if test="userHeight != null" >
+        user_Height,
+      </if>
+      <if test="userStudentNumber != null" >
+        user_Student_Number,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="userId != null" >
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="userName != null" >
+        #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="userAge != null" >
+        #{userAge,jdbcType=VARCHAR},
+      </if>
+      <if test="userSex != null" >
+        #{userSex,jdbcType=CHAR},
+      </if>
+      <if test="userBirth != null" >
+        #{userBirth,jdbcType=DATE},
+      </if>
+      <if test="userPhone != null" >
+        #{userPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="userIdCard != null" >
+        #{userIdCard,jdbcType=VARCHAR},
+      </if>
+      <if test="userPassword != null" >
+        #{userPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="userAddress != null" >
+        #{userAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="userHobby != null" >
+        #{userHobby,jdbcType=VARCHAR},
+      </if>
+      <if test="userWeight != null" >
+        #{userWeight,jdbcType=VARCHAR},
+      </if>
+      <if test="userHeight != null" >
+        #{userHeight,jdbcType=VARCHAR},
+      </if>
+      <if test="userStudentNumber != null" >
+        #{userStudentNumber,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.yekong.managesys.model.UserInfo" >
+    update user_info
+    <set >
+      <if test="userName != null" >
+        user_Name = #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="userAge != null" >
+        user_Age = #{userAge,jdbcType=VARCHAR},
+      </if>
+      <if test="userSex != null" >
+        user_Sex = #{userSex,jdbcType=CHAR},
+      </if>
+      <if test="userBirth != null" >
+        user_Birth = #{userBirth,jdbcType=DATE},
+      </if>
+      <if test="userPhone != null" >
+        user_Phone = #{userPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="userIdCard != null" >
+        user_ID_Card = #{userIdCard,jdbcType=VARCHAR},
+      </if>
+      <if test="userPassword != null" >
+        user_Password = #{userPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="userAddress != null" >
+        user_Address = #{userAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="userHobby != null" >
+        user_Hobby = #{userHobby,jdbcType=VARCHAR},
+      </if>
+      <if test="userWeight != null" >
+        user_Weight = #{userWeight,jdbcType=VARCHAR},
+      </if>
+      <if test="userHeight != null" >
+        user_Height = #{userHeight,jdbcType=VARCHAR},
+      </if>
+      <if test="userStudentNumber != null" >
+        user_Student_Number = #{userStudentNumber,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where user_Id = #{userId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.yekong.managesys.model.UserInfo" >
+    update user_info
+    set user_Name = #{userName,jdbcType=VARCHAR},
+      user_Age = #{userAge,jdbcType=VARCHAR},
+      user_Sex = #{userSex,jdbcType=CHAR},
+      user_Birth = #{userBirth,jdbcType=DATE},
+      user_Phone = #{userPhone,jdbcType=VARCHAR},
+      user_ID_Card = #{userIdCard,jdbcType=VARCHAR},
+      user_Password = #{userPassword,jdbcType=VARCHAR},
+      user_Address = #{userAddress,jdbcType=VARCHAR},
+      user_Hobby = #{userHobby,jdbcType=VARCHAR},
+      user_Weight = #{userWeight,jdbcType=VARCHAR},
+      user_Height = #{userHeight,jdbcType=VARCHAR},
+      user_Student_Number = #{userStudentNumber,jdbcType=VARCHAR}
+    where user_Id = #{userId,jdbcType=INTEGER}
+  </update>
+</mapper>
