@@ -6,7 +6,7 @@
 <script src="./jquery-1.7.2.js" type="text/javascript"></script>
 <h2>Hello World!</h2>
 请输入用户名：<input type="text" id="username"><br>
-请输入密码：<input type="text" id="password">
+请输入密码：<input type="text" id="password"><br>
 <input type="button" onclick="getname()" value="点击">
 <script type="text/javascript">
 	function getname(){
