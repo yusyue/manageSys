@@ -1,0 +1,308 @@
+/** 
+ 
+ @Name: layer皮肤--om
+ @2017.12.18 UI 间距调整
+ @2017.1.12 select overflow
+ @2017.1.10 tips color border色值 2017.12.12 add box shadow
+ @2016.12.29 mosaic null-loading 2018.1.15 fixed mosaic 边距
+ @Date: 2016.11.10
+ @Content: loading 动画更新OM logo;
+
+**/
+
+#layui_layer_skinomstylecss{display:none; position: absolute; width:1989px;}
+
+
+/* om设定 */
+body .layer-ext-om{
+	min-width:auto;
+	border:none;
+	box-shadow:none;
+	border-radius:3px;
+}
+body .layer-ext-om .layui-layer-content{
+    padding:0;
+    overflow-x: hidden;
+}
+body .layui-layer-iframe,body .layui-layer-tips .layui-layer-content{
+    overflow: hidden;
+}
+body .layer-ext-om .layui-layer-loading0 span,
+body .layer-ext-om .layui-layer-loading1 span{
+    display:none;
+}
+body .layer-ext-om .layui-layer-loading1{
+    margin-left:210px;
+}
+/* msg 消息 */
+body .layer-ext-om-msg{background:none;}
+body .layer-ext-om-msg .layui-layer-content{
+	padding:40px 25px;
+	min-width:120px;
+    max-width:240px;
+    background: #5a5a5a\9\0;
+    background: rgba(0, 0, 0, 0.65);
+    *filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#a5000000, endColorstr=#a5000000);
+
+	border-radius: 5px;
+	color:#fff;
+	text-align:center;
+}
+
+body .layer-ext-om-msg .layui-layer-content span {
+    color: #fff;
+}
+body .layer-ext-om-msg .layui-layer-padding{
+/* padding定义在content，修正无icon，不添加padding */
+}
+
+body .layer-ext-om .layui-layer-title{background:#f6f6f6; color:#000; border: 1px #e7e7e7 solid;}
+
+/* msg 消息 图标*/
+body .layer-ext-om-msg .layui-layer-content .layui-layer-ico{
+    position: relative;
+    top: -1px;
+    left:50%;
+    *left:0;
+    display: block;
+    margin-left:-24px;
+    *margin-left:0;
+    margin-right: 5px;
+    margin-bottom:15px;
+    width:48px;height:48px;
+    vertical-align: middle;
+    text-align:center;
+    background:url(../img/layer-om-icon.png) 0 0 no-repeat;
+}
+body .layer-ext-om-msg .layui-layer-content .layui-layer-ico0{background:none;}
+body .layer-ext-om-msg .layui-layer-content .layui-layer-ico1{}
+body .layer-ext-om-msg .layui-layer-content .layui-layer-ico2{background-position:0 -96px;}
+body .layer-ext-om-msg .layui-layer-content .layui-layer-ico3{background-position:0 -48px;}
+body .layer-ext-om-msg .layui-layer-content .layui-layer-ico4{background:url(../img/loading_white.gif) 7px 7px no-repeat;}
+
+/* open 弹框 */
+body .layer-ext-om .layui-layer-title{
+	margin:0 40px;
+	padding:28px 0;
+	height:24px;
+	font-size:16px;
+	line-height:24px;
+	border:none;
+	background:none;
+	color:#222;
+}
+
+/* 关闭按钮 */
+body .layer-ext-om .layui-layer-setwin{position:absolute;top:26px;right:41px;}
+body .layer-ext-om .layui-layer-setwin .layui-layer-close1,
+body .layer-ext-om .layui-layer-setwin .layui-layer-close2{width: 25px; height: 25px; background:url(../img/layer-om-icon.png) 0 -144px no-repeat;}
+body .layer-ext-om .layui-layer-setwin .layui-layer-close2{margin:10px -4px 0 0;}
+body .layer-ext-om .layui-layer-setwin .layui-layer-close1:hover,
+body .layer-ext-om .layui-layer-setwin .layui-layer-close2:hover{background:url(../img/layer-om-icon.png) 0 -172px no-repeat;}
+body .layer-ext-om .layui-layer-setwin a {position:absolute;margin-left: 0;width: 25px;height: 25px;}
+
+/* 提交按钮 */
+body .layer-ext-om .layui-layer-btn{
+	padding-bottom:20px;
+	text-align:center;
+}
+body .layer-ext-om .layui-layer-btn a{
+	position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 7px;
+    padding:0;
+    height: 40px;
+    width: 120px;
+    line-height: 40px;
+    font-size: 14px;
+    font-weight: 100;
+    color: #222;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid #d9dee0;
+    border-radius: 2px;
+    background-color: #fff;
+}
+body .layer-ext-om .layui-layer-btn a:hover{
+    color: #222;
+    background: #f5f6f6;
+    text-decoration: none;
+}
+
+body .layer-ext-om .layui-layer-btn .layui-layer-btn0{
+	color: #fff;
+    background: #26b2f7;
+    border: 1px solid #26b2f7;
+}
+body .layer-ext-om .layui-layer-btn .layui-layer-btn0:hover{
+	color: #fff;
+    background: #0093e0;
+    border-color: #0093e0;
+}
+
+/* tips */
+body .layui-layer-tips .layui-layer-content{
+	padding:0 8px;
+	box-shadow:none;
+	background:#fff;
+	color:#666;
+	border:1px solid #b9c2cd;
+	border-radius:2px;
+	font-size:12px;
+	line-height:19px;
+	text-align:center;
+	white-space: nowrap;
+    word-break:break-all;
+    overflow: visible;
+}
+body .layui-layer-tips .layui-layer-content li{
+    white-space: normal;
+    word-break:break-all;
+}
+
+body .layui-layer-tips .layui-layer-content .tooltip-inner{
+    border: none;
+}
+
+body .layui-layer-tips i.layui-layer-TipsT,
+body .layui-layer-tips i.layui-layer-TipsR,
+body .layui-layer-tips i.layui-layer-TipsB,
+body .layui-layer-tips i.layui-layer-TipsL,
+body .layui-layer-tips .layui-layer-TipsBor{
+	position: absolute;
+	width: 0;
+	height: 0;
+	border: 3px rgba(0, 0, 0, 0.0) solid ; 
+
+}
+
+body .layui-layer-tips i.layui-layer-TipsT{
+	left:50%;
+    bottom: -8px;
+    margin-left: -4px;
+    border-width: 4px;
+    border-top-color: #b9c2cd;
+    border-right-color:transparent;
+
+}
+body .layui-layer-tips i.layui-layer-TipsT .layui-layer-TipsBor{
+	left:50%;
+	bottom:-1px;
+	margin-left:-3px;
+	border-top-color: #fff;	
+}
+
+body .layui-layer-tips i.layui-layer-TipsR{
+    top:50%;
+    left:-9px;
+    margin-top:-5px;
+    border-width: 4px;
+    border-bottom-color:transparent;
+    border-right-color: #b9c2cd;
+}
+body .layui-layer-tips i.layui-layer-TipsR .layui-layer-TipsBor{
+	top:50%;
+	left:-1px;
+	margin-top:-3px;
+	border-right-color: #fff;
+}
+
+body .layui-layer-tips i.layui-layer-TipsB{
+	left:50%;
+    bottom: -8px;
+    margin-left: -4px;
+    border-width: 4px;
+    border-bottom-color: #b9c2cd;
+    border-right-color:transparent;
+}
+body .layui-layer-tips i.layui-layer-TipsB .layui-layer-TipsBor{
+	top:-1px;
+	left:50%;
+	margin-left:-3px;
+	border-bottom-color: #fff;
+}
+
+body .layui-layer-tips i.layui-layer-TipsL{
+    top:50%;
+    right:-9px;
+    margin-top:-5px;
+    border-width: 4px;
+    border-bottom-color:transparent;
+    border-left-color: #b9c2cd;
+}
+body .layui-layer-tips i.layui-layer-TipsL .layui-layer-TipsBor{
+	top:50%;
+	right:-1px;
+	margin-top:-3px;
+	border-left-color: #fff;
+}
+body .layer-ext-om.tips .layui-layer-content{
+    border:#dee5ed 1px solid;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+body .layer-ext-om.tips i.layui-layer-TipsT{
+    border-top-color: #dee5ed;
+}
+body .layer-ext-om.tips i.layui-layer-TipsR{
+    border-right-color: #dee5ed;
+}
+body .layer-ext-om.tips i.layui-layer-TipsB{
+    border-bottom-color: #dee5ed;
+}
+body .layer-ext-om.tips i.layui-layer-TipsL{
+    border-left-color: #dee5ed;
+}
+
+
+body .layui-layer-loading .layui-layer-content{
+    width: auto;
+    height: auto;
+    background: none;
+}
+
+
+body .layui-layer-loading .layui-layer-loading0,
+body .layui-layer-loading .layui-layer-loading1{
+    padding: 0;
+    margin: 150px auto;
+    width: 30px;
+    height: 30px;
+    background: url(../img/loading_black_lg_sprite.png) no-repeat;
+    background-position: 0 0;
+    -webkit-animation: loadingMoveLarge 1.2s infinite linear;
+    -webkit-animation-timing-function: steps(10);
+    animation: loadingMoveLarge 1.2s infinite linear;
+    animation-timing-function: steps(10);
+}
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+body .layui-layer-loading .layui-layer-loading0,
+body .layui-layer-loading .layui-layer-loading1{
+        background: url(../img/loading_black_lg_sprite_2x.png) no-repeat;
+        background-position: 0 0;
+        background-size: cover;
+    }
+}
+
+body .layer-ext-om.mosaic .layui-layer-content .null-loading{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin:auto;
+}
+body .layer-ext-om.mosaic .layui-layer-content{
+    border-top:#fff 20px solid;
+    border-bottom:#fff 20px solid;
+}
+body .layer-ext-om.mosaic .layui-layer-btn a{
+    margin-bottom: 40px;
+}
+body .layer-ext-om.select .layui-layer-content{
+    overflow: visible;
+}
+
+/*  |xGv00|ec591eb3614befa433c3f915cf447b82 */
