@@ -26,5 +26,6 @@ public interface UserInfoMapper {
      * @return: UserInfo      
      * @throws    测试1234567891234567
      */
+    //nininininini
     UserInfo selectUserByNameAndpassword(@Param("userName")String userName,@Param("password")String password);
 }
