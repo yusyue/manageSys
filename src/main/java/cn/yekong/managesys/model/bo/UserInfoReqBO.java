@@ -1,9 +1,8 @@
-package cn.yekong.managesys.model;
+package cn.yekong.managesys.model.bo;
 
 import java.util.Date;
 
-public class UserInfo {
-	//tijaoi 
+public class UserInfoReqBO {
     private Integer userId;
 
     private String userName;
@@ -122,22 +121,7 @@ public class UserInfo {
         return userHeight;
     }
 
-    /**   
-	 * <p>Title: toString</p>   
-	 * <p>Description: </p>   
-	 * @return   
-	 * @see java.lang.Object#toString()   
-	 */  
-	@Override
-	public String toString() {
-		return "UserInfo [userId=" + userId + ", userName=" + userName + ", userAge=" + userAge + ", userSex=" + userSex
-				+ ", userBirth=" + userBirth + ", userPhone=" + userPhone + ", userIdCard=" + userIdCard
-				+ ", userPassword=" + userPassword + ", userAddress=" + userAddress + ", userHobby=" + userHobby
-				+ ", userWeight=" + userWeight + ", userHeight=" + userHeight + ", userStudentNumber="
-				+ userStudentNumber + "]";
-	}
-
-	public void setUserHeight(String userHeight) {
+    public void setUserHeight(String userHeight) {
         this.userHeight = userHeight == null ? null : userHeight.trim();
     }
 

@@ -13,7 +13,7 @@ import cn.yekong.managesys.util.common.RspBooleanBO;
 
 /**   
  * @ClassName:  UserLoginService   
- * @Description:TODO(这里用一句话描述这个类的作用)   
+ * @Description:TODO(用户登录接口)   
  * @author: liuPeng  All rights reserved
  * @date:   2018年8月5日 下午8:42:39   
  *      
