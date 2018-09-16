@@ -24,7 +24,7 @@ public interface UserInfoMapper {
      * @param: @param password
      * @param: @return      
      * @return: UserInfo      
-     * @throws
+     * @throws    测试
      */
     //nininininini
     UserInfo selectUserByNameAndpassword(@Param("userName")String userName,@Param("password")String password);
