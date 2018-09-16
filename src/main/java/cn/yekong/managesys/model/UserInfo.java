@@ -3,6 +3,7 @@ package cn.yekong.managesys.model;
 import java.util.Date;
 
 public class UserInfo {
+	//tijaoi 
     private Integer userId;
 
     private String userName;
