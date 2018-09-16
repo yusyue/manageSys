@@ -61,7 +61,8 @@
 
 	<!-- DEFAULT PAGE -->
 	<welcome-file-list>
-		<welcome-file>loginPage/eighthPage/index.jsp</welcome-file>
+		<!-- <welcome-file>loginPage/eighthPage/index.jsp</welcome-file> -->
+		<welcome-file>shopShowView/ShoppingOne/index.jsp</welcome-file>
 		<!-- <welcome-file>index.jsp</welcome-file> -->
 	</welcome-file-list>
 
